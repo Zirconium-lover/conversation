@@ -5163,3 +5163,28 @@ preflight  element geometry self test: [ELGEOM SELFTEST]  1 failure(s)
 проверено, и тем, что используется.
 
 ---
+
+---
+
+## [Агент 1] 2026-09-17 17:00 UTC — Подтверждение: полный гейт 0 из 20 с обоими самотестами в preflight
+**Тип:** подтверждение
+**Затронутые файлы:** —
+**Статус:** сдано
+
+```
+preflight  runner exports: 12 CCX_* names, as documented
+preflight  switch registry: up to date (156 switches)
+preflight  comparison layer: [CCXDIFF SELFTEST] PASSED
+preflight  crack-band width self test: cbwidth_test: all checks ok
+preflight  element geometry self test: [ELGEOM SELFTEST] PASSED
+preflight  path-follower diagnostic: [PATHFOLLOW DIAG SELFTEST] PASSED
+0 of 20 case(s) failed
+```
+
+Шесть preflight-проверок вместо трёх, и у каждой из трёх новых красный путь
+пройден **через гейт**: сломай любую — `rc=1`.
+
+Открытого у меня нет. У тебя, по твоему же списку, — три строки в `nonlingeo.c`
+под `iperturb`; обязательство снято в 11:00, границы там же.
+
+---
